@@ -1,20 +1,30 @@
 <template>
-  <div>
+  <div >
+      <div v-if="check==1">
       <input v-model="roomname" />방이름
       <button @click="sendroomname">방 만들기</button>
       <div v-for="(res, index) in response">
-          <div>{{index+1}}</div>
-          <div>{{res}}</div>
+          <div @click="enterroom(index+1)"> {{res}}</div>
       </div>
+      </div>
+      <chatroom v-else-if="check==2" :name='name' :roomname='roomname'></chatroom>
   </div>
+
 </template>
 <script>
 import {baseurl} from '../constants/url';
+import chatroom from './chatroom'
 import axios from 'axios'
 export default {
   name:"room",
+  components:{
+      chatroom
+  },
+  props:['name'],
   data(){
       return{
+        room: 0,
+        check:1,
         roomname:null,  
         response : []
       }
@@ -25,7 +35,7 @@ export default {
               console.log(s);
               return s.roomname;
           })
-      })
+        })
         },
   methods:{
       sendroomname:function(params) {
@@ -39,7 +49,12 @@ export default {
       }).catch(e=>{
           console.log(e)
       })
+  },
+  enterroom:function(params){
+      this.check=2
+      console.log("aaaa",params)
+
   }
-  }
+}
 }
 </script>
