@@ -1,8 +1,10 @@
-package com.chat.demo;
+package com.chat.demo.controllers;
 
+import com.chat.demo.controllers.requests.Room;
 import org.springframework.web.bind.annotation.*;
-import com.chat.demo.ReponseRoom;
+import com.chat.demo.controllers.reponses.ReponseRoom;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 @CrossOrigin
@@ -18,7 +20,7 @@ public class UserController {
     @PostMapping("/made")
     public ReponseRoom  madeRoom(@RequestBody Room name){
         rooms.add(name);
-        rooms.forEach(s->System.err.println(s));
+        Collections.reverse(rooms);
         return ReponseRoom.builder().rooms(rooms).build();
     }
 }

@@ -1,4 +1,4 @@
-package com.chat.demo;
+package com.chat.demo.controllers.requests;
 
 import lombok.Builder;
 import lombok.Data;
