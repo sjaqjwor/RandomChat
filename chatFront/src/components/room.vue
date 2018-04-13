@@ -7,7 +7,7 @@
           <div @click="enterroom(index+1)"> {{res}}</div>
       </div>
       </div>
-      <chatroom v-else-if="check==2" :name='name' :roomname='roomname'></chatroom>
+      <chatroom v-else-if="check==2" :name='name' :roomname='roomname' :roomId='roomId'></chatroom>
   </div>
 
 </template>
@@ -15,6 +15,7 @@
 import {baseurl} from '../constants/url';
 import chatroom from './chatroom'
 import axios from 'axios'
+
 export default {
   name:"room",
   components:{
@@ -23,14 +24,14 @@ export default {
   props:['name'],
   data(){
       return{
-        room: 0,
+        username:null,
+        roomId: 0,
         check:1,
         roomname:null,  
         response : []
       }
   },mounted(){
           axios.get(baseurl+"/").then(res =>{
-              console.log("adasd",res)
           this.response=res.data.rooms.map(s=>{
               console.log(s);
               return s.roomname;
@@ -40,7 +41,6 @@ export default {
   methods:{
       sendroomname:function(params) {
            axios.post(baseurl+"/made",{roomname:this.roomname}).then(response =>{
-        
           this.response=response.data.rooms.map(s=>{
               console.log(s);
               return s.roomname;
@@ -49,11 +49,12 @@ export default {
       }).catch(e=>{
           console.log(e)
       })
+      this.enterroom(1);
   },
   enterroom:function(params){
       this.check=2
-      console.log("aaaa",params)
-
+      this.roomId=params
+      this.username=this.name
   }
 }
 }

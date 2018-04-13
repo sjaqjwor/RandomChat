@@ -2,8 +2,7 @@
   <div>
       <input v-if="page==0" v-model="name">
       <button v-if="page==0" @click="send">send</button>
-      <room v-if="page==1" ></room>
-      <HelloWorld v-if="page==2" :name="name" ></HelloWorld>
+      <room v-if="page==1" :name="name"></room>
   </div>
 </template>
 
