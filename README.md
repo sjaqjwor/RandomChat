@@ -96,7 +96,7 @@ WebSocket
 
 ## 참고
 ```
- Googel
+ Google
  GitHub
  book
 ```
