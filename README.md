@@ -83,8 +83,8 @@ mvn spring-boot:run
 ## 사용된 기술
 ```
 Springboot
-vuejs <br />
-Stomp <br />
+vuejs
+Stomp
 WebSocket 
 ```
 
