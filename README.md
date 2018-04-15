@@ -6,7 +6,16 @@
 ## 소개하기
 **Springboot vuejs를 활용한 간단한 랜덤채팅**
 
-## 준비하기
+
+## 사용된 기술
+```
+Springboot
+vuejs
+Stomp
+WebSocket 
+```
+
+## npm & Dependencies
 
 **Vue js**
 
@@ -82,15 +91,6 @@ npm start
 ```
 mvn spring-boot:run
 ```
-
-## 사용된 기술
-```
-Springboot
-vuejs
-Stomp
-WebSocket 
-```
-
 
 ## 저자
 ```
