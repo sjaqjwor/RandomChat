@@ -71,22 +71,28 @@ npm install "webstomp-client";
 
 ## 실행하기
 
-**vue js npm start**
-**Springboot mvn spring-boot:run**
-
+**vue js** 
+```
+npm start
+```
+**Springboot** 
+```
+mvn spring-boot:run
+```
 
 ## 사용된 기술
 
-**Springboot**
-**vuejs**
-**Stomp**
-**WebSocket**
+**Springboot** <br />
+**vuejs** <br />
+**Stomp** <br />
+**WebSocket** <br />
 
 
 
 ## 저자
-
-**이승기** - 
+```
+이승기
+``` 
 
 ## 참고
 
