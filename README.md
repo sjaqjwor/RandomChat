@@ -4,7 +4,7 @@
 <br />
 
 ## 소개하기
-**Springboot vuejs를 활용한 간단한 랜덤채팅 **
+**Springboot vuejs를 활용한 간단한 랜덤채팅**
 
 ## 준비하기
 
