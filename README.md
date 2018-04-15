@@ -81,12 +81,12 @@ mvn spring-boot:run
 ```
 
 ## 사용된 기술
-
-**Springboot** <br />
-**vuejs** <br />
-**Stomp** <br />
-**WebSocket** <br />
-
+```
+Springboot
+vuejs <br />
+Stomp <br />
+WebSocket 
+```
 
 
 ## 저자
@@ -95,7 +95,8 @@ mvn spring-boot:run
 ``` 
 
 ## 참고
-
-* Googel
-* GitHub
-* book
+```
+ Googel
+ GitHub
+ book
+```
