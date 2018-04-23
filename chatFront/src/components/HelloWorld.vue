@@ -5,9 +5,7 @@
       <label>With label</label>
       <md-input v-model="contents" placeholder="A nice placeholder"></md-input>
     </md-field>
-
   </div>
-
 </div>
 </template>
 
@@ -19,7 +17,7 @@ import Stomp from "webstomp-client";
 
 export default{
   name : 'HelloWorld',
-  props:['name'],
+  props:['kame'],
   data(){
     return{
       message : [],

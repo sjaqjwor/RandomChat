@@ -38,6 +38,10 @@ export default {
               }
             
           });
+          this.stompClient.subscribe('/messageBroker/room/alert/'+this.roomId,(tick)=>{
+              let m = JSON.parse(tick.body);
+            alert(m);
+          });
           this.stompClient.send('/receive/'+this.roomId,JSON.stringify({'username':this.name,'contents':this.content}),{})
       })
     
